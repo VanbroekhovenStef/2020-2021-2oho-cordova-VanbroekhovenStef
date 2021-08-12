@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <title>Plug-ins</title>
+    <style>
+        .spa { display: none; }
+        #tabLogin { display: block; }
+    </style>
+</head>
+<body>
+<!-- Fixed navbar -->
+<div class="navbar-fixed">
+    <nav class="teal">
+        <div class="nav-wrapper container">
+            <a href="#!" class="brand-logo center">Batshuayi</a>
+            <a href="#!" data-target="nav-mobile" class="sidenav-trigger show-on-large" id="navUnfold">
+                <i class="material-icons">menu</i>
+            </a>
+        </div>
+    </nav>
+</div>
+<!-- Fixed sideNav -->
+<ul id="nav-mobile" class="sidenav">
+    <li><a href="#!" data-show="tabInfo"><i class="material-icons">info</i>Info</a></li>
+    <li>
+        <div class="divider"></div>
+    </li>
+    <li><a href="#!" data-show="tabConsumptions" id="consumpties"><i class="material-icons">sports_bar</i>Consumpties</a></li>
+    <li>
+        <div class="divider"></div>
+    </li>
+    <li><a href="#!" data-show="tabOverview" id="overzicht"><i class="material-icons">description</i>Overzicht</a></li>
+    <li>
+        <div class="divider"></div>
+    </li>
+    <li><a href="#!" data-show="tabHighscores" id="highscoresTab"><i class="material-icons">emoji_events</i>Highscores</a></li>
+    <li>
+        <div class="divider"></div>
+    </li>
+    <li><a href="#!" data-show="tabLogin" id="logoutButton"><i class="material-icons">power_settings_new</i>Uitloggen</a></li>
+</ul>
+<!-- Grid -->
+<div class="container">
+    <div class="row spa" data-role="page" id="tabLogin">
+
+        <!-- login header -->
+        <div data-theme="a" data-role="header">
+            <h3>Login</h3>
+        </div>
+
+        <!-- login form -->
+        <div data-role="content">
+            <label for="username">Gebruikersnaam</label>
+            <input type="text" value="" name="username" id="username"/>
+            <label for="password">Paswoord</label>
+            <input type="password" value="" name="password" id="password"/>
+            <a class="waves-effect waves-light btn" data-role="button" id="loginButton" data-theme="b">Login</a>
+            Status: <p id="status"></p>
+        </div>
+    </div>
+    <div class="row spa" id="tabInfo">
+        <div class="col s12">
+            <h4><i class="material-icons">info</i> Info</h4>
+            <div id="info"></div>
+        </div>
+    </div>
+
+    <div class="row spa" id="tabConsumptions">
+        <div class="col s12">
+            <h4><i class="material-icons">sports_bar</i> Consumpties</h4>
+            <div id="consumptions">
+                <div id="saldo"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row spa" id="tabConsumption">
+        <div class="col s12">
+            <h4><i class="material-icons">sports_bar</i> Consumptie</h4>
+            <div id="consumption"></div>
+        </div>
+    </div>
+    <div class="row spa" id="tabOverview">
+        <div class="col s12">
+            <h4>Persoonlijk Overzicht</h4>
+            <div id="overview">
+            </div>
+        </div>
+    </div>
+    <div class="row spa" id="tabHighscores">
+        <div class="col s12">
+            <h4><i class="material-icons">emoji_events</i> Highscores</h4>
+            <div id="highscores">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Positie</td>
+                            <td>Persoon</td>
+                            <td>Score</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="cordova.js"></script>
+<script src="js/info.js"></script>
+<script src="js/login.js"></script>
+<script src="js/highscores.js"></script>
+<script src="js/consumptions.js"></script>
+<script src="js/consumption.js"></script>
+<script src="js/overview.js"></script>
+
+<!-- JavaScript defer: https://www.w3schools.com/tags/att_script_defer.asp -->
+<script defer src="js/app.js"></script>
+</body>
+</html>

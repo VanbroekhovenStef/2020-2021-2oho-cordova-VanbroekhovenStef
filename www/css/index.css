@@ -1,0 +1,7 @@
+li {
+    list-style-type: circle;
+}
+
+li ul li {
+    padding-left: 2rem;
+}

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "311552486425",
+    "project_id": "batshuayi-auth",
+    "storage_bucket": "batshuayi-auth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:311552486425:android:e7f97f69d43e4c33b8ce88",
+        "android_client_info": {
+          "package_name": "be.stef.batshuayi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "311552486425-pafnb5snr9qavbj8vc1ehinvvvq4p23k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC48AwHKyGQKu7BPHbLouJv7BiYiJ3SyPI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "311552486425-pafnb5snr9qavbj8vc1ehinvvvq4p23k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
