@@ -35,8 +35,6 @@ De laravel applicatie wordt ook gebruikt om het app-debug.apk bestand aan te bie
 
 ## Consumpties
 ![Consumpties](https://user-images.githubusercontent.com/74854941/129408802-b4c391ce-882f-463c-a509-7ff853fcdddc.PNG)
-
-## Gekozen consumptie (persoonlijk en traktatie)
 ![Consumptie](https://user-images.githubusercontent.com/74854941/129408835-98443320-5b6f-479e-a835-bf74495ce9fe.PNG)
 ![Trakteren](https://user-images.githubusercontent.com/74854941/129408864-7fb27b49-5909-4841-aff8-723d073d6931.PNG)
 
