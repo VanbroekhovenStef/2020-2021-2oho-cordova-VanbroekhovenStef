@@ -6,20 +6,20 @@ saldo opgebouwd waar de getrakteerde gratis van kan afnemen. Daarnaast heeft elk
 consumpties die hij door het jaar heeft aangeduid, met daarbij het te betalen bedrag. Als laatste kunnen highscores geraadpleegd
 worden tussen de leiding. Deze zijn onderverdeeld op persoonlijk niveau, per tak en per jaargroep.
 
-Specificaties
+# Specificaties
 
-Front-end
+## Front-end
 
 De front-end maakt gebruik van materialize css voor de opmaak.
 
-Functionaliteit
+## Functionaliteit
 
 De functionaliteit van deze applcatie is afhankelijk van een database die thuis op een Raspberry Pi 
 gehost wordt. Met behulp van AJAX functies wordt deze aangesproken wanneer een actie wordt ingezet door de 
 gebruiker. Local storage wordt gebruikt om gegevens van de ingelogde gebruiker en de gekozen consumptie bij 
 te houden.
 
-Back-end
+## Back-end
 
 De database is gemaakt in een laravel applicatie. Hierin zijn alle API's opgesteld die 
 aangesproken worden door de applicatie.
