@@ -28,5 +28,20 @@ resultaten vanuit een elektronica projectje door te sturen naar dezelfde databas
 is echter nog geen interface gemaakt in de applicatie.
 De laravel applicatie wordt ook gebruikt om het app-debug.apk bestand aan te bieden.
 
+# Screenshots
+
+## Login scherm
 ![Login](https://user-images.githubusercontent.com/74854941/129408705-2a1ecfc0-a0ef-4dc3-9bad-d02852176a16.PNG)
 
+## Consumpties
+![Consumpties](https://user-images.githubusercontent.com/74854941/129408802-b4c391ce-882f-463c-a509-7ff853fcdddc.PNG)
+
+## Gekozen consumptie (persoonlijk en traktatie)
+![Consumptie](https://user-images.githubusercontent.com/74854941/129408835-98443320-5b6f-479e-a835-bf74495ce9fe.PNG)
+![Trakteren](https://user-images.githubusercontent.com/74854941/129408864-7fb27b49-5909-4841-aff8-723d073d6931.PNG)
+
+## Overzicht
+![Overzicht](https://user-images.githubusercontent.com/74854941/129408870-656a24ea-cba5-4378-84b1-6662e01c9cb5.PNG)
+
+## Highscores
+![Highscores](https://user-images.githubusercontent.com/74854941/129408886-f4277e67-f777-47d5-8b77-ecd4bae381c6.PNG)
