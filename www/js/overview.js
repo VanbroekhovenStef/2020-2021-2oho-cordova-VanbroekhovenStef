@@ -27,8 +27,7 @@ let Overview = function () {
         let user_id = window.localStorage.getItem('UserID');
         $.ajax({
             type: 'GET', crossDomain: true, cache: false,
-            url: base_url + 'user_consumptions',
-            data: 'id=' + user_id,
+            url: base_url + 'consumptions',
             success: function (data) {
                 console.log(data);
                 for (i = 0; i < data.length; i++) {
@@ -58,7 +57,7 @@ let Overview = function () {
                         trakteerArray[key] = 0;
                     }
 
-                    // Vul de arrays met aantallen
+                    // Vul de arrays (persoonlijk en getrakteerde consumpties) met aantallen
                     for (i = 0; i < data.length; i++) {
                         prijsArray[data[i].consumption.name] = data[i].consumption.price;
                         if (data[i].traktatie) {

@@ -27,6 +27,7 @@ let Consumption = function () {
             }, 500);
         });
 
+        // Lijst van personen die getrakteerd kunnen worden vullen en weergeven wanneer aangevinkt(elke user behalve jezelf)
         $('#trakteren').click(function() {
             if ($(this).prop('checked')) {
                 $.getJSON(base_url + 'all_users', function (data) {
@@ -73,14 +74,17 @@ let Consumption = function () {
                 data: getrakteerde,
                 dataType: 'json',
                 success: function (data) {
+                    // Array vullen met alle saldos van de getrakteerde
                     let saldoGetrakteerdeArray = {};
                     for (i = 0; i < data.length; i++) {
                         saldoGetrakteerdeArray[data[i].consumption.name] = data[i].amount;
                     }
 
+                    // Saldo ophalen van de gekozen consumptie. Indien het leeg is kies je 0 als aantal.
                     let saldoGetrakteerdeAmount = saldoGetrakteerdeArray[consumption_name] ? saldoGetrakteerdeArray[consumption_name] : 0;
                     amount = parseInt(amount) + parseInt(saldoGetrakteerdeAmount);
 
+                    // Updaten van het saldo van de getrakteerde in de database
                     let getrakteerdeString = 'user=' + getrakteerde_id + '&consumption=' + consumption_id + '&amount=' + amount;
                     setTimeout(function() {
                         $.ajax({
@@ -105,6 +109,7 @@ let Consumption = function () {
     }
 
     let addConsumption = function () {
+        // Ophalen nodige gegevens
         let user_id = window.localStorage.getItem('UserID');
         let consumption_id = window.localStorage.getItem('consumption_id');
         let consumption_name = window.localStorage.getItem('consumption_name');
@@ -112,13 +117,14 @@ let Consumption = function () {
         let traktatie = $('#trakteren').prop('checked') ? 'traktatie' : 'geen';
         let getrakteerde_id = $('#getrakteerde_id').val();
 
+        // Saldo ophalen uit local storage (erin geplaatst in consumptions.js)
         let saldo = JSON.parse(window.localStorage.getItem('saldo'));
-
         let saldoAmount = saldo[consumption_name] ? saldo[consumption_name] : 0;
         if (amount === "") {
             alert('Aantal kan niet leeg zijn');
 
-        // Als de user een saldo heeft van het geselecteerde item, zal het aantal eerst van zijn saldo afgetrokken worden vooraleer een UserConsumption wordt aangemaakt
+        // Als de user een saldo heeft van het geselecteerde item, zal het aantal eerst van zijn saldo afgetrokken worden
+        // vooraleer een UserConsumption wordt aangemaakt
         } else if (saldoAmount > 0) {
             // Als het saldo hoger is dan het ingegeven aantal, wordt enkel van het saldo afgetrokken
             if (saldoAmount >= amount) {
@@ -136,7 +142,7 @@ let Consumption = function () {
                     }
                 });
 
-                // Als het een traktatie is, moet dit bij het saldo van de getrakteerde opgeteld worden.
+                // Als de gebruiker iemand trakteert, moet het saldo van de getrakteerde omhoog gaan
                 setTimeout(function() {
                     if (traktatie === 'traktatie') {
                         updateTraktatie(getrakteerde_id, consumption_id, consumption_name, amount);
@@ -146,6 +152,7 @@ let Consumption = function () {
             // Als het saldo lager is dan het ingegeven aantal moet eerst het saldo tot 0 gebracht worden, en daarna het overgebleven
             // aantal als UserConsumption geregistreerd worden
             } else {
+                // Saldo op 0 zetten
                 let correctedAmount = amount - saldoAmount;
                 let saldoString = 'user=' + user_id + '&consumption=' + consumption_id + '&amount=' + 0;
                 $.ajax({
@@ -160,6 +167,7 @@ let Consumption = function () {
                     }
                 });
 
+                // UserConsumption toevoegen bij de gebruiker met het gecorrigeerde aantal
                 let consumptionString = "user=" + user_id + "&consumption=" + consumption_id + "&amount=" + correctedAmount + "&traktatie=" + traktatie + "&getrakteerde=" + getrakteerde_id;
                 setTimeout(function() {
                     $.ajax({
@@ -175,7 +183,7 @@ let Consumption = function () {
                         }
                     });
                 }, 50);
-                // Als het gaat om een traktatie, moet het saldo van de getrakteerde omhoog gaan
+                // Als de gebruiker iemand trakteert, moet het saldo van de getrakteerde omhoog gaan
                 setTimeout(function() {
                     if (traktatie === 'traktatie') {
                         updateTraktatie(getrakteerde_id, consumption_id, consumption_name, amount);
@@ -186,7 +194,6 @@ let Consumption = function () {
 
         // Indien de gebruiker geen saldo heeft, wordt voor de bestelling een UserConsumption aangemaakt
         } else {
-            // let url_consumption = 'http://stefvb.sinners.be/api/user_consumptions';
             let consumptionString = "user=" + user_id + "&consumption=" + consumption_id + "&amount=" + amount + "&traktatie=" + traktatie + "&getrakteerde=" + getrakteerde_id;
             $.ajax({
                 type: "POST", crossDomain: true, cache: false,
@@ -199,7 +206,7 @@ let Consumption = function () {
                     alert("error\n" + error);
                 }
             });
-
+            // Als de gebruiker iemand trakteert, moet het saldo van de getrakteerde omhoog gaan
             setTimeout(function() {
                 if (traktatie === 'traktatie') {
                     updateTraktatie(getrakteerde_id, consumption_id, consumption_name, amount);

@@ -5,7 +5,7 @@ let Highscores = function () {
         $(document).ready(function(){
             $('.tabs').tabs();
         });
-
+        // Bouw de initiële kolommen van de tabel
         let data = `
               <div class="row">
                 <div class="col s12">
@@ -23,6 +23,7 @@ let Highscores = function () {
         $('#highscores').html(data);
     };
 
+    // Vullen tabel per persoon
     let createPersTable = function() {
         $.ajax({
             type: 'GET', crossDomain: true, cache: false,
@@ -63,6 +64,7 @@ let Highscores = function () {
         });
     }
 
+    // Vullen tabel per tak
     let createTakkenTable = function() {
         $.ajax({
             type: 'GET', crossDomain: true, cache: false,
@@ -103,6 +105,7 @@ let Highscores = function () {
         });
     }
 
+    // Vullen tabel per jaar
     let createJaarTable = function() {
         $.ajax({
             type: 'GET', crossDomain: true, cache: false,

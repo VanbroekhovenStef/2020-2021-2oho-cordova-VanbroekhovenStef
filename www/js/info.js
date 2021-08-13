@@ -22,7 +22,8 @@ let Info = function () {
                             <ul>
                                 <li>De functionaliteit van deze applcatie is afhankelijk van een database die thuis op een Raspberry Pi 
                                 gehost wordt. Met behulp van AJAX functies wordt deze aangesproken wanneer een actie wordt ingezet door de 
-                                gebruiker. Local storage wordt gebruikt om gegevens van de ingelogde gebruiker bij te houden.</li>
+                                gebruiker. Local storage wordt gebruikt om gegevens van de ingelogde gebruiker en de gekozen consumptie bij 
+                                te houden.</li>
                             </ul>
                         </li>
                         <li><b>Back-end</b>
@@ -31,8 +32,8 @@ let Info = function () {
                                 aangesproken worden door de applicatie.<br>
                                 Er zijn vier tabellen die de applicatie gebruikt (zie foto). De tabel Result wordt gebruikt om 
                                 resultaten vanuit een elektronica projectje door te sturen naar dezelfde database (zie filmpje). Hiervan 
-                                is echter nog geen interface gemaakt in de applcatie.<br><img src="img/Datamodel.PNG" alt="datamodel" width="300">
-                                De laravel applicatie wordt ook gebruikt om het app-debug.apk bestand aan te bieden</li>
+                                is echter nog geen interface gemaakt in de applicatie.<br><img src="img/Datamodel.PNG" alt="datamodel" width="300">
+                                De laravel applicatie wordt ook gebruikt om het app-debug.apk bestand aan te bieden.</li>
                             </ul>
                         </li>
                     </ul>

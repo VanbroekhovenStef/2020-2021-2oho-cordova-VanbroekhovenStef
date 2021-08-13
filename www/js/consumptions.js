@@ -7,7 +7,6 @@ let Consumptions = function () {
             url: base_url + 'consumptions',
             dataType: 'json',
             success: function (data) {
-                console.log(data);
                 let cards = `<div class="row">`;
                 for (i = 0; i < data.length; i++) {
                     cards += `
