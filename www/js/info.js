@@ -3,7 +3,7 @@ let Info = function () {
         let data = `
             <b>Naam: </b>Stef Vanbroekhoven<br>
             <b>E-mail: </b><a href="mailto:r0630975@student.thomasmore.be">r0630975@student.thomasmore.be</a><br>
-            <b>Telefoon: </b><a href="tel:0497384416"></a>0497384416<br>
+            <b>Telefoon: </b><a href="tel:+32497384416">0497384416</a><br>
             <div>
                 <h4><i class="material-icons">flag</i> Algemene info</h4>
                 <p>Met deze applicatie kan leiding van scouts Sint-Pieter Mol de <b>consumpties</b> die ze tijdens het jaar consumeren <b>digitaal registreren</b>.
@@ -30,9 +30,7 @@ let Info = function () {
                             <ul>
                                 <li>De database is gemaakt in een laravel applicatie. Hierin zijn alle API's opgesteld die 
                                 aangesproken worden door de applicatie.<br>
-                                Er zijn vier tabellen die de applicatie gebruikt (zie foto). De tabel Result wordt gebruikt om 
-                                resultaten vanuit een elektronica projectje door te sturen naar dezelfde database (zie filmpje). Hiervan 
-                                is echter nog geen interface gemaakt in de applicatie.<br><img src="img/Datamodel.PNG" alt="datamodel" width="300">
+                                Er zijn vier tabellen die de applicatie gebruikt (zie foto). <br><img src="img/screenshots/Datamodel.PNG" alt="datamodel" width="300">
                                 De laravel applicatie wordt ook gebruikt om het app-debug.apk bestand aan te bieden.</li>
                             </ul>
                         </li>
