@@ -6,6 +6,9 @@ saldo opgebouwd waar de getrakteerde gratis van kan afnemen. Daarnaast heeft elk
 consumpties die hij door het jaar heeft aangeduid, met daarbij het te betalen bedrag. Als laatste kunnen highscores geraadpleegd
 worden tussen de leiding. Deze zijn onderverdeeld op persoonlijk niveau, per tak en per jaargroep.
 
+De applicatie kan gedownload worden op de volgende link:
+http://batshuayi.chickenkiller.com
+
 # Specificaties
 
 ## Front-end
