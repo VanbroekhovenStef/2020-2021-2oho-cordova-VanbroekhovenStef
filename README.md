@@ -23,10 +23,7 @@ te houden.
 
 De database is gemaakt in een laravel applicatie. Hierin zijn alle API's opgesteld die 
 aangesproken worden door de applicatie.
-Er zijn vier tabellen die de applicatie gebruikt (zie foto). De tabel Result wordt gebruikt om 
-resultaten vanuit een elektronica projectje door te sturen naar dezelfde database (zie filmpje). Hiervan 
-is echter nog geen interface gemaakt in de applicatie.
-De laravel applicatie wordt ook gebruikt om het app-debug.apk bestand aan te bieden.
+Er zijn vier tabellen die de applicatie gebruikt (zie foto). De laravel applicatie wordt ook gebruikt om het app-debug.apk bestand aan te bieden.
 ![Datamodel](https://user-images.githubusercontent.com/74854941/129409385-9adf2bff-24a2-41de-91b1-bde9d189cf18.PNG)
 
 # Screenshots
