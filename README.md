@@ -23,12 +23,14 @@ te houden.
 
 De database is gemaakt in een Laravel applicatie. Hierin zijn alle API's opgesteld die 
 aangesproken worden door de applicatie.
-Er zijn vier tabellen die de applicatie gebruikt (zie foto). De Laravel applicatie wordt ook gebruikt om het app-debug.apk bestand aan te bieden.
+Er zijn vier tabellen die de applicatie gebruikt: User, UserConsumption, Consumption en Saldo. Saldo heeft betrekking op de traktaties die gemaakt kunnen worden, en staat onafhankelijk van UserConsumption. Dit betekent dat wanneer een gebruiker een saldo heeft staan, het geselecteerde aantal eerst hiervan wordt afgetrokken, en slechts het overgebleven deel in de tabel UserConsumption terecht komt en dus betaald moet worden..
 ![Datamodel](https://user-images.githubusercontent.com/74854941/129409385-9adf2bff-24a2-41de-91b1-bde9d189cf18.PNG)
+
+De tabel Result wordt gebruikt om resultaten vanuit een elektronica projectje door te sturen naar dezelfde database. De resultaten hiervan kunnen via een RFID-tag gelinkt worden aan de gebruikers. Hiervan is echter nog geen interface gemaakt in de applicatie.
 
 ## Hosting
 
-API wordt gehost op een Raspberry Pi die thuis staat aangesloten op het netwerk. De database wordt hier bijgehouden, en de Laravel-applicatie zorgt ervoor dat deze toegankelijk is. Om dit uit te werken heb ik gebruik gemaakt van de opgedane kennis bij het vak Linux. Daarnaast heb ik via port forwardng de API extern beschikbaar gemaakt.
+API wordt gehost op een Raspberry Pi die thuis staat aangesloten op het netwerk. De database wordt hierop bijgehouden, en de Laravel-applicatie zorgt ervoor dat deze toegankelijk is via een API. Om dit uit te werken heb ik gebruik gemaakt van de opgedane kennis bij het vak Linux. Daarnaast heb ik via port forwardng de API extern beschikbaar gemaakt.
 
 # Screenshots
 
