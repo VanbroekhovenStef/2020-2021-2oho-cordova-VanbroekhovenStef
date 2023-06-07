@@ -21,14 +21,14 @@ te houden.
 
 ## Back-end
 
-De database is gemaakt in een laravel applicatie. Hierin zijn alle API's opgesteld die 
+De database is gemaakt in een Laravel applicatie. Hierin zijn alle API's opgesteld die 
 aangesproken worden door de applicatie.
-Er zijn vier tabellen die de applicatie gebruikt (zie foto). De laravel applicatie wordt ook gebruikt om het app-debug.apk bestand aan te bieden.
+Er zijn vier tabellen die de applicatie gebruikt (zie foto). De Laravel applicatie wordt ook gebruikt om het app-debug.apk bestand aan te bieden.
 ![Datamodel](https://user-images.githubusercontent.com/74854941/129409385-9adf2bff-24a2-41de-91b1-bde9d189cf18.PNG)
 
 ## Hosting
 
-API wordt gehost op een Raspberry Pi die thuis staat aangesloten op het netwerk. De database wordt hier bijgehouden, en de laravel-applicatie zorgt ervoor dat deze toegankelijk is. Om dit uit te werken heb ik gebruik gemaakt van de opgedane kennis bij het vak Linux. Daarnaast heb ik via port forwardng de API extern beschikbaar gemaakt.
+API wordt gehost op een Raspberry Pi die thuis staat aangesloten op het netwerk. De database wordt hier bijgehouden, en de Laravel-applicatie zorgt ervoor dat deze toegankelijk is. Om dit uit te werken heb ik gebruik gemaakt van de opgedane kennis bij het vak Linux. Daarnaast heb ik via port forwardng de API extern beschikbaar gemaakt.
 
 # Screenshots
 
